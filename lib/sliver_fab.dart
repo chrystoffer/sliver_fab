@@ -28,10 +28,10 @@ class SliverFab extends StatefulWidget {
   SliverFab({
     required this.slivers,
     required this.floatingWidget,
+    required this.scrollController,
     this.floatingPosition = const FloatingPosition(right: 16.0),
     this.expandedHeight = 256.0,
     this.topScalingEdge = 96.0,
-    this.scrollController
   });
 
   @override
