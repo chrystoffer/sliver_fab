@@ -13,8 +13,9 @@ class _ExampleOneScreenState extends State<ExampleOneScreen> {
       body: new Builder(
         builder: (context) {
           return new SliverFab(
+            scrollController: new ScrollController(),
             floatingWidget: FloatingActionButton(
-              onPressed: () => Scaffold.of(context)
+              onPressed: () => ScaffoldMessenger.of(context)
                   .showSnackBar(SnackBar(content: Text("You clicked FAB!"))),
               child: Icon(Icons.add),
             ),
