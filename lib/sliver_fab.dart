@@ -21,9 +21,14 @@ class SliverFab extends StatefulWidget {
   ///Position of the widget.
   final FloatingPosition floatingPosition;
 
+  //Controller for the scrollview
+  final ScrollController scrollController;
+
+
   SliverFab({
     required this.slivers,
     required this.floatingWidget,
+    required this.scrollController,
     this.floatingPosition = const FloatingPosition(right: 16.0),
     this.expandedHeight = 256.0,
     this.topScalingEdge = 96.0,
@@ -36,18 +41,16 @@ class SliverFab extends StatefulWidget {
 }
 
 class SliverFabState extends State<SliverFab> {
-  ScrollController? scrollController;
 
   @override
   void initState() {
     super.initState();
-    scrollController = new ScrollController();
-    scrollController!.addListener(() => setState(() {}));
+    widget.scrollController.addListener(() => setState(() {}));
   }
 
   @override
   void dispose() {
-    scrollController!.dispose();
+    widget.scrollController.dispose();
     super.dispose();
   }
 
@@ -56,7 +59,7 @@ class SliverFabState extends State<SliverFab> {
     return Stack(
       children: <Widget>[
         CustomScrollView(
-          controller: scrollController,
+          controller: widget.scrollController,
           slivers: widget.slivers,
         ),
         _buildFab(),
@@ -77,8 +80,8 @@ class SliverFabState extends State<SliverFab> {
 
     double top = defaultTopMargin;
     double scale = 1.0;
-    if (scrollController!.hasClients) {
-      double offset = scrollController!.offset;
+    if (widget.scrollController.hasClients) {
+      double offset = widget.scrollController.offset;
       top -= offset > 0 ? offset : 0;
       if (offset < scale1edge) {
         scale = 1.0;

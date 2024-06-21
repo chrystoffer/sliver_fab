@@ -15,6 +15,7 @@ class _ExampleTwoScreenState extends State<ExampleTwoScreen> {
       body: new Builder(
         builder: (context) {
           return new SliverFab(
+            scrollController: new ScrollController(),
             floatingWidget: Container(
               height: 100,
               width: 100,

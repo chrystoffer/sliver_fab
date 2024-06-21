@@ -1,12 +1,12 @@
 name: sliver_fab
 description: A wrapper widget allowing to place a widget on the edge of FlexibleSpacebar
-version: 2.0.0
+version: 2.1.0
 author: Marcin Szalek <marcinszalek1@gmail.com>
 homepage: https://github.com/MarcinusX/sliver_fab
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: ">=2.2.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:

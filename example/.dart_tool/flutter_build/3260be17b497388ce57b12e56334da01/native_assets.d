@@ -1,0 +1,1 @@
+ /Users/keananmeier/dev/sliver_fab/example/.dart_tool/flutter_build/3260be17b497388ce57b12e56334da01/native_assets.yaml: 

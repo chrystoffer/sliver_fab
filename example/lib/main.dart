@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.all(16),
-              child: RaisedButton(
+              child: ElevatedButton(
                 child: Text("Example 1"),
                 onPressed: () {
                   Navigator.push(
@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text("Example 2"),
               onPressed: () {
                 Navigator.push(
